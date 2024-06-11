@@ -1,0 +1,120 @@
+*{
+    font-family: "Outfit", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --color-green: #80CD0D;
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --btn-color-bg: #9c3;
+}
+
+h2 {
+    color: #1a1a1a;
+    font-family: Outfit, Sans-serif;
+    font-size: 45px;
+    font-weight: 600;
+    line-height: 42px;
+    letter-spacing: -1px;
+    text-align: center;
+}
+
+.form_texts p {
+    text-align: center;
+    margin: 20px 0 16px 0;
+
+}
+
+/* sections and divs form*/
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section_form {
+    padding: 25px 0 25px 0;
+}
+
+.section_form_conteiner {
+    max-width: 1140px;
+}
+
+.form_container {
+    width: 100%;
+}
+
+/* inputs form */
+.form_group input, .form_group select {
+    width: 100%;
+    border-radius: 2px;
+    box-sizing: border-box;
+    border: solid 1px #69727d;
+    padding: 5px 14px 5px 14px;
+    
+}
+
+.form_group{
+    margin-bottom: 10px;
+}
+
+.form_group input, .form_group select{
+    margin-top: 8px;
+}
+
+.form_group select, .form_group input {
+    color: #69727d;
+    height: 40px;
+}
+
+.form_group_row {
+    display: flex;
+}
+
+.form_group_row {
+    display: flex;
+    gap: 10px; 
+}
+
+.form_group_city {
+    width: 80%
+   
+}
+
+.form_group_state {
+    width: 20%;
+}
+/* btn form */
+.send_button button {
+    width: 100%;
+    border: none;
+    color: var(--color-black);
+    padding: 7.5px 15px 7.5px 15px;
+    background-color: var(--btn-color-bg);
+    box-shadow: 5px 5px var(--color-black);
+}
+
+.send_button button:hover {
+    color: var(--color-white);
+    box-shadow: 5px 5px var(--color-black);
+}
+
+.send_button button:focus {
+    color: var(--color-white);
+    background-color: var(--color-black);
+    box-shadow: 5px 5px var(--btn-color-bg);
+}
+
+/* footer */
+footer {
+    width: 100%;
+    height: 92px;
+    color: var(--color-black);
+    background-color: var(--color-green);
+}
+
+footer p {
+    font-size: 1rem;
+}
