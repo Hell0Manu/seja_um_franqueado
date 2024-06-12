@@ -14,7 +14,7 @@
 h2 {
     color: #1a1a1a;
     font-family: Outfit, Sans-serif;
-    font-size: 45px;
+    font-size: 2.8125rem;
     font-weight: 600;
     line-height: 42px;
     letter-spacing: -1px;
@@ -24,7 +24,6 @@ h2 {
 .form_texts p {
     text-align: center;
     margin: 20px 0 16px 0;
-
 }
 
 /* sections and divs form*/
@@ -42,6 +41,11 @@ h2 {
     max-width: 1140px;
 }
 
+.container {
+    margin: 0 auto;
+    padding: 0 15px; 
+}
+
 .form_container {
     width: 100%;
 }
@@ -52,25 +56,19 @@ h2 {
     border-radius: 2px;
     box-sizing: border-box;
     border: solid 1px #69727d;
-    padding: 5px 14px 5px 14px;
-    
-}
-
-.form_group{
-    margin-bottom: 10px;
-}
-
-.form_group input, .form_group select{
-    margin-top: 8px;
-}
-
-.form_group select, .form_group input {
+    padding: 5px 14px;
     color: #69727d;
     height: 40px;
 }
 
-.form_group_row {
-    display: flex;
+.form_group input:focus,
+.form_group select:focus {
+    border-color: var(--color-green);
+    outline: none;
+}
+
+.form_group{
+    margin-bottom: 10px;
 }
 
 .form_group_row {
@@ -79,17 +77,18 @@ h2 {
 }
 
 .form_group_city {
-    width: 80%
-   
+    width: 80% 
 }
 
 .form_group_state {
     width: 20%;
 }
+
 /* btn form */
 .send_button button {
     width: 100%;
     border: none;
+    cursor: pointer;
     color: var(--color-black);
     padding: 7.5px 15px 7.5px 15px;
     background-color: var(--btn-color-bg);
@@ -117,4 +116,16 @@ footer {
 
 footer p {
     font-size: 1rem;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .form_group_row {
+        flex-direction: column;
+    }
+
+    .form_group_city,
+    .form_group_state {
+        width: 100%;
+    }
 }

@@ -18,7 +18,7 @@
         <section></section>
         <section></section>
         <section class="section_form">
-            <div class="section_form_conteiner">
+            <div class="section_form_conteiner container">
                 <div class="form_texts"> 
                     <h2 >Saiba tudo sobre o modelo de negócio mais promissor do momento e seja um franqueado!</h2>
                     <p>Preencha seus dados e receba nossa apresentação completa</p>
@@ -27,26 +27,26 @@
                     <form class="form_contact" name="form_contact" id="id_form_contact">
                         <div class="form_group">
                             <label class="class_label"> Nome Completo</label>
-                            <input type="text" name="name" id="name" placeholder="Nome" />
+                            <input type="text" name="name" id="name" placeholder="Nome" required/>
                         </div>
 
                         <div class="form_group">
                             <label class="class_label">E-mail</label>
-                            <input type="email" name="email" id="email" placeholder="E-mail" />
+                            <input type="email" name="email" id="email" placeholder="E-mail" required/>
                         </div>
                         <div class="form_group">
                             <label class="class_label">Telefone</label>
-                            <input type="text" name="phone" id="phone" placeholder="Telefone" />
+                            <input type="text" name="tel" id="tel" placeholder="Telefone" required pattern="[0-9]{10,11}"/>
                         </div>
 
                         <div class="form_group_row">
                             <div class="form_group form_group_city">
                                 <label class="class_label">Cidade</label>
-                                <input type="text" name="city" id="city" placeholder="Informe sua cidade" />
+                                <input type="text" name="city" id="city" placeholder="Informe sua cidade" required/>
                             </div>
                             <div class="form_group form_group_state">
                                 <label class="class_label">Estado</label>
-                                <select name="state" id="state" class="" required="required" aria-required="true">
+                                <select name="state" id="state" class="" required aria-required="true">
                                     <option value="AC">AC</option>
                                     <option value="AL">AL</option>
                                     <option value="AP">AP</option>
@@ -80,7 +80,7 @@
 
                         <div class="form_group">
                             <label class="class_label">Capital para investimento</label>
-                            <select name="investment" id="investment" class="" required="required" aria-required="true">
+                            <select name="investment" id="investment" class="" required aria-required="true">
                                 <option value="80 mil a 100 mil">80 mil a 100 mil</option>
                                 <option value="100 mil a 150 mil">100 mil a 150 mil</option>
                                 <option value="150 mil a 300 mil">150 mil a 300 mil</option>
@@ -90,14 +90,14 @@
                         </div>
 
                         <div class="send_button">
-                            <button type="button" class="btn">Enviar</button>
+                            <button type="submit" class="btn">Enviar</button>
                         </div>
                     </form>
                 </div>
             </div>
         </section>
     </main>
-    <footer class="center">
+    <footer class="center container">
         <p>&copy; Copyright. 2024. market4u. Todos os direitos reservados.</p>
     </footer>
 </body>
