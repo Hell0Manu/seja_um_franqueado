@@ -3,7 +3,7 @@
     padding: 0;
     overflow-x: hidden;
     box-sizing: border-box;
-    scroll-behavior: smooth;
+   
     font-family: "Outfit", sans-serif;
 }
 
@@ -20,28 +20,87 @@ main {
     flex-direction: column; 
 }
 
+h1 {
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 44px;
+    letter-spacing: -1px;
+}
+
+/* section {
+    max-width: 1140px;
+} */
+
+header {
+    background-image: url('https://i0.wp.com/market4u.com.br/wp-content/uploads/2023/01/banner-home-min.png?fit=1920%2C1080&ssl=1');
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin-bottom: 0;
+    padding: 94px 20px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.teste4 {
+    margin: 0 40px 0 10px;
+    padding: 34px;
+    max-width: 500px;
+    width: 100%;
+    
+}
+
+.teste5 p {
+    margin: 20px 0;
+    font-size: 20px;
+    
+}
+
+@media (max-width: 768px) {
+    header {
+        background-position: calc(60% - 100px)  top; 
+    }
+}
+
+
+
+.teste3 {
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
 .teste 
 {
     grid-gap: 40px;
     margin-bottom: 24px;
 }
 
-.teste1 {
+.teste3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsividade para colunas */
+    margin-bottom: 24px;
+}
+
+.teste1{
     display: grid;
     grid-template-columns: repeat(2, 500px);
     margin-bottom: 24px;
 }
 
 .teste1 .element_boxx {
-    width:445.200px;
+    width:100%;
     min-height: 300px;
     border: solid 3px #64686d2e;
-    padding: 10px;
+    padding: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 /*box*/
@@ -83,8 +142,10 @@ main {
 }
 
 .element_box img, .element_boxx img {
-    width:114px;
-    height: 114px;
+    width: 100%;
+    max-width: 114px;
+    max-height: 114px;
+    height: 100%;
 }
 
 .btn a {
@@ -178,6 +239,7 @@ h2 {
     padding-bottom: 20px;
 }
 
+
 .form_texts p {
     text-align: center;
     margin: 20px 0 16px 0;
@@ -233,14 +295,14 @@ h2 {
 }
 
 /* btn form */
-.send_button button {
+.send_btn {
     width: 100%;
     border: none;
     cursor: pointer;
     color: var(--color-black);
     padding: 7.5px 15px 7.5px 15px;
     background-color: var(--btn-color-bg);
-    box-shadow: 5px 5px var(--color-black);
+    box-shadow: 5px 5px #000000;
 }
 
 .send_button button:hover {
@@ -274,8 +336,12 @@ footer p {
         justify-content: center; 
     }
 
+    .teste1 .element_boxx {
+        padding: 30px;
+    }
+
     .teste1 {
-        grid-template-columns: repeat(1, 500px);
+        grid-template-columns: repeat(1, 100%);
     }
 
     .box_left, .box_right{
@@ -308,6 +374,29 @@ footer p {
     .form_group_state {
         width: 100%;
     }
+
+    .item_three {
+        flex: 0 0 100%; /* Mostrar apenas 1 slide por linha em mobile */
+        max-width: 100%; /* Largura total do container */
+    }
+
+    .links_desktop_carousel {
+        display: none; /* Ocultar navegação desktop em mobile */
+    }
+
+    .links_mobile_carousel {
+        display: flex; /* Mostrar navegação mobile */
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    .arrow_left,
+    .arrow_right {
+        display: block; /* Mostrar os controles de navegação em mobile */
+        font-size: 0; /* Reduzir tamanho dos ícones para mobile */
+    }
+
+ 
 }
 
 /*accordion*/
@@ -315,6 +404,8 @@ footer p {
 .accordion {
     max-width: 500px;
     width: 100%;
+    width: 80vw; 
+
 }
 
 .accordion h2 {
@@ -403,8 +494,9 @@ details > *:not(summary) {
     padding: 0;
     display: flex;
     max-width: 560px;
-    width: 100%;
-    overflow-x: scroll;
+    width: 80vw; 
+
+   
     scroll-behavior: smooth;
 }
 
