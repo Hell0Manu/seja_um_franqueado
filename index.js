@@ -1,16 +1,27 @@
-document.getElementById('id_form_contact').addEventListener('submit', function(event) {
-    event.preventDefault();
 
-    const name = document.getElementById('name').ariaValueMax;
-    const email = document.getElementById('email').ariaValueMax;
-    const webhookurl = 'https://hook.us1.make.com/1saeldc4jut43g1h2gibz1v1m20b8egii'
-    ;
+document.addEventListener('DOMContentLoaded', function(){
+    document.getElementById('id_form_contact').addEventListener('submit', sendMessage) 
+})
+
+function sendMessage(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const tel = document.getElementById('tel').value;
+    const city = document.getElementById('city').value;
+    const state = document.getElementById('state').value;
+    const investment = document.getElementById('investment').value;
+    const webhookurl = 'https://hook.us1.make.com/tsd1x29rtelk21uhd100g2i8ir518bit';
 
         const data = {
         name: name,
-        email: email    
+        email: email,  
+        tel: tel,
+        city: city,
+        state: state,
+        investment: investment  
+        
     };
-
 
     fetch(webhookurl, {
         method: 'POST',
@@ -31,5 +42,5 @@ document.getElementById('id_form_contact').addEventListener('submit', function(e
         comsole.error('Error:', error);
         alert('Error ocurred');
     })
-
-})
+}
+   

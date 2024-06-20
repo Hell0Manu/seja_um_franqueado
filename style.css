@@ -262,7 +262,7 @@ blockquote cite {
 }
 
 /* button form */
-.send_btn {
+#send_btn {
     width: 100%;
     border: none;
     cursor: pointer;

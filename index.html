@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Seja um franqueado do market4u</title>
+    <script src="index.js"></script>
 </head>
 
 <body>
@@ -270,10 +271,11 @@
                     <p>Preencha seus dados e receba nossa apresentação completa</p>
                 </div>
                 <div class="form_container">
-                    <form class="form_contact" name="form_contact" id="id_form_contact">
+                    <form class="form_contact"  name="form_contact" id="id_form_contact" method="post" action="https://hook.us1.make.com/tsd1x29rtelk21uhd100g2i8ir518bit
+                    ">
                         <div class="form_group">
                             <label class="class_label"> Nome Completo</label>
-                            <input type="text" name="name" id="name" placeholder="Nome" required/>
+                            <input type="name" name="name" id="name" placeholder="Nome" required/>
                         </div>
 
                         <div class="form_group">
@@ -336,7 +338,7 @@
                         </div>
 
                         <div class="submit_button">
-                            <button type="submit" class="send_btn">Enviar</button>
+                            <button type="submit" id="send_btn" value="envia">Enviar</button>
                         </div>
                     </form>
                 </div>
@@ -346,5 +348,7 @@
     <footer class="footer_last center container">
         <p>&copy; Copyright. 2024. market4u. Todos os direitos reservados.</p>
     </footer>
+    
 </body>
 </html>
+
