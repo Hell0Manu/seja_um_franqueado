@@ -18,32 +18,33 @@ function sendMessage(event) {
         sendEmailModeloIdToLead: 1,
         sendNotificationToResponsavel: true,
         negocio: {
-            titulo: "Novo Negócio",
-            responsavelId: 999, 
-            situacaoId: 1, 
-            etapaId: 9, 
+            titulo: "sucesso 5",
+            responsavelId: 86,
+            situacaoId: 2,
+            etapaId: 1,
             descricao: "Descrição do negócio",
             valor: investment,
             temperatura: 3,
             cidade: city,
             uf: state,
-            origemId: 2, 
-            campanhaId: 3 
+            origemId: 26,
+            campanhaId: 3
         },
         pessoa: {
             nome: name,
             email: email,
             phone: tel,
             cidade: city,
-            uf: state
+            uf: state,
+            investment: investment
         },
         empresa: {
             nomeFantasia: "Empresa AAAA",
             razaoSocial: "Empresa AAA Social",
-            cnpj: "78751245754", 
-            email: "mammm@live.com", 
-            phone: "34 3333-3333", 
-            cidade: "São José", 
+            cnpj: "78751245754",
+            email: "mammm@live.com",
+            phone: "34 3333-3333",
+            cidade: "São José",
             uf: state
         }
     };
@@ -51,21 +52,25 @@ function sendMessage(event) {
     fetch(webhooks, {
         method: 'POST',
         headers: {
-            'Authorization': 'O2RlbW9uc3RyYWNhbzsxNzE5MjM3ODQwNjIx', 
+            'Authorization': 'O2RlbW9uc3RyYWNhbzsxNzE5MjM3ODQwNjIx',
             'Content-Type': 'application/json;charset=UTF-8'
         },
         body: JSON.stringify(data)
     })
-        .then(response => {
-            if (response.ok) {
-                alert('Success!');
-            }
-            else {
+    .then(response => {
+        if (response.ok) {
+            alert('Success!');
+        } else {
+            response.text().then(text => {
+                console.error('Failed:', text);
                 alert('Failed');
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            alert('Error occurred');
-        });
+            });
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        alert('Error occurred');
+    });
+
+    console.log(JSON.stringify(data, null, 2));
 }
